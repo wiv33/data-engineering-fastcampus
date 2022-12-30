@@ -15,6 +15,6 @@ word_count_query = counts_df.writeStream.format("console") \
 word_count_query.awaitTermination()
 
 # nc -lk 9999
-# > pyspark spark sql streaming
-# > spark graphx pyspark
+# > pyspark data-engineering-fastcampus sql streaming
+# > data-engineering-fastcampus graphx pyspark
 # > counter batch filter

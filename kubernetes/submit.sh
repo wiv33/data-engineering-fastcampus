@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# spark
+# data-engineering-fastcampus
 bin/spark-submit \
         --master k8s://https://node1:6443 \
         --deploy-mode cluster \
