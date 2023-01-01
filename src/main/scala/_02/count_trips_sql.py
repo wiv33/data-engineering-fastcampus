@@ -8,7 +8,7 @@ import os
 # !pip install pyarrow fastparquet
 
 target_directory = '/Users/auto/github/data-engineering-fastcampus/data'
-target_data = 'fhvhv_tripdata_2020-03'
+target_data = 'fhvhv_tripdata_2020-03_airflow_with_spark'
 if not os.path.isfile(f'{target_directory}/{target_data}.csv'):
     # 시간이 오래 걸리는 변환 작업을 거르기 위한 로직
     df = pd.read_parquet('%s/%s.parquet' % (target_directory, target_data))
