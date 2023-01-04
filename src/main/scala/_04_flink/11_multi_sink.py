@@ -13,6 +13,8 @@ data = [
 
 t1 = t_env.from_elements(data, col_names)
 t2 = t_env.from_elements(data, col_names)
+# sink1은 csv
+# sink2는 kafka 등의 여러 조합으로 사용 가능.
 t_env.execute_sql("""
   CREATE TABLE print_sink1 (
     id BIGINT,
@@ -36,3 +38,4 @@ statement_set.add_insert("print_sink2", t2)
 
 statement_set.execute().wait()
 # print(statement_set.explain())
+
